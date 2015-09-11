@@ -1,0 +1,29 @@
+#include<string.h>
+#include<stdlib.h>
+#include<stdio.h>
+void main()
+{	
+	char s[100];
+	printf("Enter s");
+	scanf("%s",s);
+	int len,i,j;
+	len=strlen(s);
+        for(i=0;i<len;i++)
+	{
+		j=(int)s[i];
+		if(j>=65&&j<=90)
+		{			
+			j=j+32;
+			s[i]=(char)j;
+			continue;
+		}			
+		if(j>=97&&j<=112)
+		{			
+			j=j-32;
+			s[i]=(char)j;
+			continue;
+		}
+	}
+	printf("%s", s);
+}	
+	
