@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+void main()
+{
+    int i,flag=0;
+    char a[100], b[100];
+    printf("enter the first string\n");
+    gets(a);
+    printf("enter the second string\n");
+    gets(b);
+    int l=strlen(b);
+    int q=strlen(a);
+    int c[255], d[255];
+   for(i=0;i<255;i++)
+   {
+       c[i]=0;
+       d[i]=0;
+   }
+    if(l==q)
+    {
+        for(i=0;i<l;i++)
+        {
+            c[((int)a[i])]++;
+            d[((int)b[i])]++;
+        }
+        for(i=0;i<255;i++)
+        {
+            if(c[i]!=d[i])
+                flag++;
+
+        }
+         if(flag==0)
+            printf("Yes");
+         else
+            printf("No");
+    }
+    else
+        printf("No");
+}
