@@ -1,0 +1,19 @@
+//size of array to which the first is copied is note inputted
+#include<stdio.h>
+#include<stdlib.h>  
+#include<string.h>
+char *duplicate(int, char[]);
+void main()
+{
+	char a[100];char *b;
+	scanf("%s", a);
+	b=duplicate(strlen(a), a);
+	printf("%s", b);
+}
+char *duplicate(int l, char c[l])
+{
+	char *ptr;
+	ptr =(char*)malloc((l+1)*sizeof(char));
+	strcpy(ptr,c);
+	return ptr;
+}
