@@ -1,0 +1,13 @@
+int div(char a[],int m,int l)
+{
+	int i,j,sum=0;
+	for(i=0;i<l;i++)
+	{
+		j=(int)(a[i])-48;
+		sum=(sum*10+j)%m;
+	}
+	if(sum==0)
+		return 0;
+	else
+		return 1;		
+}
