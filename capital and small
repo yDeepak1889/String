@@ -11,19 +11,19 @@ void main()
         for(i=0;i<len;i++)
 	{
 		j=(int)s[i];
-		if(j>=65&&j<=90)
+		if(j>=65 && j<=90)
 		{			
 			j=j+32;
 			s[i]=(char)j;
 			continue;
 		}			
-		if(j>=97&&j<=112)
+		if(j>=97 && j<=112)
 		{			
 			j=j-32;
 			s[i]=(char)j;
 			continue;
 		}
 	}
-	printf("%s", s);
+	printf("%s\n", s);
 }	
 	
